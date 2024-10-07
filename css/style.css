@@ -1,0 +1,299 @@
+:root {
+    --primario : #403731;
+    --primarioOscuro :#2B2521;
+    --secundario: #F5EC00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #fFF;
+    --negro : #000;
+    --morado:#AE26BA;
+
+ 
+    --fuentePrincipal: 'staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/*Globales*/
+
+body{
+    background-color:var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    max-width: 100%;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+img{
+width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/*Header*/
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+margin: 3rem 0;
+}
+
+/*Footer*/
+
+.footer{
+background-color: var(--primarioOscuro);
+padding: 1rem 0;
+margin-top: 2rem;
+}
+.footer__texto{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+
+}
+
+/*Navegacion*/
+
+.navegacion{
+background-color: var(--primarioOscuro);
+padding: 2rem ;
+display: flex ;
+justify-content: center;
+gap: 2rem;
+width: 100;
+
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    color: var(--blanco);
+    
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+}
+
+
+/*Grid*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    
+}
+@media (min-width: 768px) {
+    .grid{
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*Producto*/
+
+.producto{
+background-color: var(--primarioOscuro);
+padding: 1.3rem;
+}
+.producto__imagen{
+  max-width: 120rem;
+}
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 3rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*Graficos*/
+
+.grafico{
+min-height: 30rem;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.grafico--camisa{
+grid-row: 2 / 3;
+grid-column: 1 / 3;
+background-image: url(../FrontEndStore_inicio/FrontEndStore_inicio/img/grafico1.jpg);
+}
+
+@media (min-width: 768px) {
+    .grafico--node{
+        grid-row: 5/6;
+        grid-column:2/4;
+        }
+}
+
+.grafico--node{
+background-image: url(../FrontEndStore_inicio/FrontEndStore_inicio/img/grafico2.jpg);
+grid-column: 2/3;
+grid-row: 6/8;
+}
+
+
+/*Contenedor*/
+
+
+@media (min-width: 768px) {
+    .contenedor{
+        display: grid;
+        grid-template-rows: repeat(2/ 1fr);
+        column-gap: 2rem;
+        width: 100%;
+     
+        }
+}
+
+@media (min-width: 768px ) {
+    .Contenido__sobreNosotros{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        padding: 2rem; 
+    }
+    
+}
+.Contenido__sobreNosotros{
+display: grid;
+grid-template-rows: repeat(2/ 1fr);
+
+}
+
+.Nosotros__imagen{
+    grid-row: 1/2;
+   
+}
+@media (min-width: 768px) {
+    .Nosotros__imagen{
+        grid-column: 2/3;
+    }
+    
+}
+
+/*Iconos Finales*/
+
+.IconosFinales{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+.IconosFinales{
+    display: flex;
+}
+}
+
+.Icono{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+.Icono p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.Camisa{
+        display: block;
+}
+
+@media (min-width: 768px) {
+    .Camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+    
+.Camisa__imagen{
+width: 100%;
+}
+
+/*Texto del Producto (descripcion)*/
+
+.Camisa__contenido p{
+    line-height: 4rem;
+    font-size: 3rem;
+}
+
+/* Formulario*/
+
+.Formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.Formulario__campo{
+    background-color: var(--morado);
+    font-size: 2.5rem;
+    font-family:var(--fuentePrincipal);
+    border-radius: .5rem;
+    font-weight: bold;
+    border-color:var(--primarioOscuro);
+    color: var(--blanco);
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1rem;
+    width: 100%;
+}
+
+.Formulario__sumbit{
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    height:6rem;
+    background-color: var(--secundario);
+    transition: font size.9%ease;
+    grid-column: 1/3;
+    border: none;
+    padding: 2rem;
+    
+ 
+}
+.Formulario__sumbit:hover {
+    font-size: 2.3rem;
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
